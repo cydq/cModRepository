@@ -1,0 +1,59 @@
+name: Deploy repository to Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+  
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          repository: 'cydq/cModLoader'
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Build for production
+        run: pnpm run build
+      - name: Upload Build
+        uses: actions/upload-artifact@master
+        with:
+          name: cModLoader.js
+          path: dist/cModLoader.js
+      
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Download Build
+        uses: actions/upload-artifact@master
+        with:
+          name: cModLoader.js
+          path: cModLoader.js
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
