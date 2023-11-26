@@ -6,7 +6,7 @@
       "version": "1.0.0",
       "description": "A test mod",
       "author": "cydq",
-      "entry": "https://cml.snowy.cafe/mods/test/1.0.0/index.js"
+      "entry": "https://cml.snowy.cafe/mods/test/1.0.0.js"
     }
   }
 }
