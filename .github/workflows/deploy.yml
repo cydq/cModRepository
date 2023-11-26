@@ -30,10 +30,15 @@ jobs:
       - name: Build for production
         run: pnpm run build
       - name: Upload Build
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v3
         with:
           name: cModLoader.js
           path: dist/cModLoader.js
+      - name: Upload Userscript
+        uses: actions/upload-artifact@v3
+        with:
+          name: cModLoader.user.js
+          path: cModLoader.user.js
       
   deploy:
     needs: [ 'build' ]
@@ -47,10 +52,15 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Download Build
-        uses: actions/download-artifact@master
+        uses: actions/download-artifact@v3
         with:
           name: cModLoader.js
-          path: cModLoader.js
+          path: '.'
+      - name: Download Userscript
+        uses: actions/download-artifact@v3
+        with:
+          name: cModLoader.user.js
+          path: '.'
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v2
         with:
