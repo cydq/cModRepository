@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "hash": 1701037342246,
+  "hash": 1701131439092,
   "mods": {
     "test": {
-      "version": "1.0.1",
+      "version": "1.0.2",
       "description": "A test mod",
       "author": "cydq",
-      "entry": "https://cml.snowy.cafe/mods/test/1.0.1.js"
+      "entry": "https://cml.snowy.cafe/mods/test/1.0.2.js"
     }
   }
 }
