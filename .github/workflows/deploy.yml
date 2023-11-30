@@ -34,6 +34,11 @@ jobs:
         with:
           name: cModLoader.js
           path: dist/cModLoader.js
+      - name: Upload Source Maps
+        uses: actions/upload-artifact@v3
+        with:
+          name: cModLoader.js.map
+          path: dist/cModLoader.js.map
       - name: Upload Userscript
         uses: actions/upload-artifact@v3
         with:
@@ -55,6 +60,11 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: cModLoader.js
+          path: '.'
+      - name: Download Source Maps
+        uses: actions/download-artifact@v3
+        with:
+          name: cModLoader.js.map
           path: '.'
       - name: Download Userscript
         uses: actions/download-artifact@v3
