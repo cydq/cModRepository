@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": 1701589595564,
+  "hash": 1701589595565,
   "mods": {
     "audio-jungle": {
       "version": "1.0.1",
@@ -9,10 +9,10 @@
       "entry": "https://cml.snowy.cafe/mods/audio-jungle/1.0.1.js"
     },
     "test": {
-      "version": "1.0.4",
+      "version": "1.0.5",
       "description": "A test mod",
       "author": "cydq",
-      "entry": "https://cml.snowy.cafe/mods/test/1.0.4.js"
+      "entry": "https://cml.snowy.cafe/mods/test/1.0.5.js"
     }
   }
 }
