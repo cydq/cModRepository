@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "hash": 1701589595565,
+  "hash": 1701754838328,
   "mods": {
     "audio-jungle": {
-      "version": "1.0.1",
+      "version": "1.0.2",
       "description": "You probably don't want this...",
       "author": "cydq",
-      "entry": "https://cml.snowy.cafe/mods/audio-jungle/1.0.1.js"
+      "entry": "https://cml.snowy.cafe/mods/audio-jungle/1.0.2.js"
     },
     "test": {
       "version": "1.0.5",
