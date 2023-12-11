@@ -23,7 +23,7 @@ submission according to the following guidelines.
 | `name` (key)  | Mod Name        | `[A-Za-z0-9._-]+`                              |
 | `version`     | Mod Version     | `x.y.z`                                        |
 | `description` | Mod Description | Any string you'd like (:                       |
-| `author`      | Mod Author      | Discord Username                               |
+| `author`      | Mod Author      | GitHub Username                                |
 | `entry`       | Script Location | https://cml.snowy.cafe/mods/{mod}/{version}.js |
 
 3. Add your file under `/mods/{mod_name}/{mod_version}.js`
